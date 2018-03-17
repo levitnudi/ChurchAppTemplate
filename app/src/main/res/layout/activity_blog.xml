@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <org.schabi.cog.pager.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/background_tabs" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/colors"
+        android:layout_below="@+id/tabs"
+        tools:context=".Blog"/>
+
+
+    <LinearLayout
+        android:id="@+id/colors"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dip"
+        android:layout_marginLeft="4dip"
+        android:layout_marginRight="4dip"
+        android:orientation="horizontal" >
+
+
+        <Button
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/printer"
+            android:background="#FF96AA39"
+            android:text="Print"
+            android:layout_gravity="start"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:onClick="onColorClicked"
+            android:tag="#FF96AA39"
+            android:id="@+id/print" />
+
+        <Button
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:text="Profiles"
+            android:layout_gravity="start"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/ic_people"
+            android:background="#FFF4842D"
+            android:onClick="onColorClicked"
+            android:tag="#FFF4842D"
+            android:id="@+id/basket" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_awesome"
+    tools:context="org.schabi.cog.Home">
+
+    <org.schabi.cog.adapter.CircleLayout
+        android:id="@+id/circle_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/selected_textView"
+        android:layout_gravity="center_horizontal" >
+        <include layout="@layout/menu_items" />
+    </org.schabi.cog.adapter.CircleLayout>
+
+    <TextView
+        android:id="@+id/selected_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:textColor="#DAA520"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+</RelativeLayout>

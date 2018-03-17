@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.schabi.newpipe">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name="org.schabi.cog.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:logo="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
+        <activity
+            android:name="org.schabi.cog.Splash"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.schabi.cog.VideoItemDetailActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH" />
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="youtube.com" />
+                <data android:host="m.youtube.com" />
+                <data android:host="www.youtube.com" />
+                <data android:pathPrefix="/v/" />
+                <data android:pathPrefix="/watch" />
+                <data android:pathPrefix="/attribution_link" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH" />
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="youtu.be" />
+                <data android:pathPrefix="/" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH" />
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="vnd.youtube" />
+                <data android:scheme="vnd.youtube.launch" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.schabi.cog.player.PlayVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/VideoPlayerTheme"
+            tools:ignore="UnusedAttribute" />
+
+        <service
+            android:name="org.schabi.cog.player.BackgroundPlayer"
+            android:exported="false"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name="org.schabi.cog.player.ExoPlayerActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="org.schabi.newpipe.exoplayer.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="content" />
+                <data android:scheme="asset" />
+                <data android:scheme="file" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="org.schabi.cog.player.BackgroundPlayer"
+            android:exported="false"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name="org.schabi.cog.SettingsActivity"
+            android:label="@string/settings_activity_title" />
+        <activity
+            android:name="org.schabi.cog.Pinboard"
+            android:icon="@mipmap/ic_launcher"
+            android:label="Pinboard"
+            android:theme="@style/BlueTheme" />
+        <activity
+            android:name="org.schabi.cog.WindowSurface"
+            android:label="About"
+            android:theme="@style/AlertDialog.AppCompat" />
+        <activity
+            android:name="org.schabi.cog.ShadowCardStack"
+            android:label="About"
+            android:theme="@style/AppTheme" />
+
+        <!-- giga get related -->
+        <activity
+            android:name="org.schabi.cog.download.MainActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:largeHeap="true"
+            android:launchMode="singleTask"
+            android:theme="@style/OrangeTheme" />
+
+        <service android:name="us.shandian.giga.service.DownloadManagerService" />
+
+        <receiver
+            android:name="org.schabi.cog.syncengine.Realtime"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="org.schabi.cog.syncengine.ServerFetcher"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="org.schabi.cog.Blog"
+            android:label="Blog"
+            android:largeHeap="true"
+            android:theme="@style/OrangeTheme" />
+        <activity
+            android:name="org.schabi.cog.Home"
+            android:icon="@mipmap/ic_launcher"
+            android:label="Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="org.schabi.cog.Browser"
+            android:icon="@mipmap/ic_launcher"
+            android:largeHeap="true"
+            android:theme="@style/BlueTheme" />
+        <activity
+            android:name="org.schabi.cog.EditActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_edit_notes_activity"
+            android:parentActivityName="org.schabi.cog.Notes"
+            android:theme="@style/AppNotes">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.schabi.cog.Notes" />
+        </activity>
+        <activity
+            android:name="org.schabi.cog.Notes"
+            android:theme="@style/AppNotes" />
+
+        <receiver
+            android:name="org.schabi.cog.syncengine.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="org.schabi.cog.Profile"></activity>
+    </application>
+
+</manifest>

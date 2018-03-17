@@ -1,0 +1,90 @@
+-- phpMyAdmin SQL Dump
+-- version 4.0.10.7
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost:****
+-- Generation Time: Apr 06, 2016 at 04:37 PM
+-- Server version: 5.5.45-cll-lve
+-- PHP Version: 5.4.31
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `**********`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `media`
+--
+
+CREATE TABLE IF NOT EXISTS `media` (
+  `mediaId` int(11) NOT NULL AUTO_INCREMENT,
+  `mediaUrl` varchar(1000) DEFAULT NULL,
+  `mediaDescription` text NOT NULL,
+  PRIMARY KEY (`mediaId`),
+  KEY `mediaId` (`mediaId`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `media`
+--
+
+INSERT INTO `media` (`mediaId`, `mediaUrl`, `mediaDescription`) VALUES
+(1, 'off', 'GO-LIVE'),
+(7, 'BkDnI-HhpCA', 'I adore you is the hit Single of the City of God Music Teams Heart of Worship Album.. 201');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `messages`
+--
+
+CREATE TABLE IF NOT EXISTS `messages` (
+  `messageId` int(11) NOT NULL AUTO_INCREMENT,
+  `messageContent` text NOT NULL,
+  PRIMARY KEY (`messageId`),
+  KEY `messageId` (`messageId`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`messageId`, `messageContent`) VALUES
+(1, 'One Church, five cities. Touching lives and impacting a generation Please take out time to browse our site and get involved in what God is doing in the City of God.');
+
+-- --------------------------------------------------------
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `version`
+--
+
+CREATE TABLE IF NOT EXISTS `version` (
+  `currentVersion` int(11) NOT NULL AUTO_INCREMENT,
+  `versionName` text NOT NULL,
+  PRIMARY KEY (`currentVersion`),
+  KEY `currentVersion` (`currentVersion`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `version`
+--
+
+INSERT INTO `version` (`currentVersion`, `versionName`) VALUES
+(1, 'V1.0');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

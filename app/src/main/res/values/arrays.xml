@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main_list">
+        <item>@string/main_sample</item>
+        <item>@string/main_no_rotation</item>
+        <item>@string/main_attributes</item>
+        <item>@string/main_dynamic_attributes</item>
+        <item>@string/main_any_view</item>
+        <item>@string/main_dynamic_children</item>
+    </string-array>
+    
+</resources>

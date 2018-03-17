@@ -1,0 +1,120 @@
+<resources>
+
+    <style name="RootTheme" parent="android:Theme.Holo"></style>
+
+    <style name="PlayerTheme" parent="@style/RootTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
+    <style name="ExoPlayerButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">40dp</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/light_youtube_primary_color</item>
+        <item name="colorPrimaryDark">@color/light_youtube_dark_color</item>
+        <item name="colorAccent">@color/liteblue</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="OrangeTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/liteorange</item>
+        <item name="colorPrimaryDark">@color/darkorange</item>
+        <item name="colorAccent">@color/liteblue</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="BlueTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/liteblue</item>
+        <item name="colorPrimaryDark">@color/darkblue</item>
+        <item name="colorAccent">@color/liteblue</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">false</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="VideoPlayerTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:actionBarStyle">@style/VideoPlayerActionBarTheme</item>
+        <item name="actionBarStyle">@style/VideoPlayerActionBarTheme</item>
+        <item name="colorAccent">@color/light_youtube_primary_color</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
+    <style name="VideoPlayerActionBarTheme" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:displayOptions">showHome</item>
+        <item name="displayOptions">showHome</item>
+        <item name="android:background">@color/video_overlay_color</item>
+        <item name="background">@color/video_overlay_color</item>
+    </style>
+
+    <style name="CityOfGodActionbarTheme" parent="Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="android:displayOptions">showHome</item>
+        <item name="displayOptions">showHome</item>
+        <item name="colorPrimary">@color/light_youtube_primary_color</item>
+        <item name="colorPrimaryDark">@color/light_youtube_dark_color</item>
+    </style>
+
+    <style name="header_font_style">
+        <item name="android:textColor">#DAA520</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
+    <style name="AppNotes" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/liteorange</item>
+        <item name="colorPrimaryDark">@color/liteorange</item>
+        <item name="colorAccent">@color/liteorange</item>
+        <item name="colorControlNormal">@color/liteorange</item>
+        <item name="colorControlActivated">@color/liteorange</item>
+        <item name="colorControlHighlight">@color/liteorange</item>
+        <item name="colorButtonNormal">@color/liteorange</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:textColorPrimary">@color/liteorange</item>
+        <item name="actionModeStyle">@style/ActionModeStyle</item>
+        <item name="actionMenuTextColor">@color/liteorange</item>
+    </style>
+
+    <style name="ActionModeStyle" parent="Widget.AppCompat.ActionMode">
+        <item name="background">@color/liteorange</item>
+    </style>
+
+    <style name="ImageTitle">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">#99000000</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="ButtonContainer">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:background">#99000000</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

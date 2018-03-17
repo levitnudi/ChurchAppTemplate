@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="org.schabi.cog.Home">
+
+    <item
+        android:id="@+id/info"
+        android:icon="@drawable/ic_info"
+        android:title="About"
+        android:orderInCategory="100"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/ic_share"
+        android:title="Share"
+        android:orderInCategory="100"
+        app:showAsAction="always" />
+
+</menu>

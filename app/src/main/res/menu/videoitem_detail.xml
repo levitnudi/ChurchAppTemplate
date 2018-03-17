@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menu_item_play_audio"
+        android:title="@string/play_audio"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/headset" />
+
+    <item android:id="@+id/menu_item_download"
+        app:showAsAction="ifRoom"
+        android:title="@string/download"
+        android:icon="@drawable/download"/>
+
+    <item android:id="@+id/menu_item_share"
+        android:title="@string/share"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/share"/>
+
+
+</menu>
